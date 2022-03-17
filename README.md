@@ -1,5 +1,5 @@
 # Simple PHP Portals
-Hey! This is a simple, puristic and small PHP portal engine. With portals you can send contents from any procedural point of your app to any other point. Throw your contents back and forth through time. A portal is a single point of time and space inside your template or app. You can just open portals and then send contents to there from any other location of your app. No mater if the target portal is defined before or after you will send content to there. This makes portals extremely efficient. Portals just work by replacing strings and will not require complex parsing. So this approach is very fast.
+Hey! This is a simple, puristic and small PHP portal engine. With portals, you can send contents from any procedural point of your app to any other point. Throw your contents back and forth through time. A portal is a single point of time and space inside your template or app. You can just open portals and then send contents to there from any other location of your app. No mater if the target portal is defined before or after, you will send content to there. This makes portals extremely efficient. Portals just work by replacing strings and will not require complex parsing. So this approach is very fast.
 
 ## Simple example:
 ```php
@@ -81,9 +81,9 @@ Portal::send('main-content', '<p>The portal page</p>', true);
 ```
 
 ## Send contents only once
-Sometimes contens should only send once to a portal. No mater how often they are send to there.
-This is usefull if some plugins or theme particals requires the same resources for example.
-Set the fourth parameter to true so the following JavaScript will only be send once:
+Sometimes contents should only send once to a portal. No mater how often they are sent to there.
+This is useful if some plugins or theme partials requires the same resources, for example.
+Set the fourth parameter to true, so the following JavaScript will only be sent once:
 ```
 Portal::send('javascript', '<script>console.log("Hello world 2");</script>', false, true);
 ```
