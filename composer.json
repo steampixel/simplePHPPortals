@@ -1,0 +1,20 @@
+{
+    "name": "steampixel/simple-php-portals",
+    "description": "This is a simple, puristic and small PHP portal engine. Throw your contents back and forth through time.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Steampixel",
+            "email": "info@steampixel.de",
+            "homepage": "https://steampixel.de/"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+      "psr-0": {
+          "Steampixel": "src/"
+      }
+  }
+}
