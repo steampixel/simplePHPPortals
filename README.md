@@ -26,7 +26,6 @@ Portal::send('style', '<style>body{background:#ccc;}</style>');
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?=Portal::open('head') ?>
     <?=Portal::open('style') ?>
   </head>
 
