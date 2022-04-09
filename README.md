@@ -74,7 +74,7 @@ Portal::init();
 
 ## ⇠ Prepend contents instead of appending them
 Sometimes you want to prepend contents to a portal instead of appending it.
-Just set the first parameter to true to prepend the content to the current stack.
+Just set the third parameter to true to prepend the content to the current stack.
 ```
 Portal::send('main-content', '<p>The portal page</p>', true);
 ```
