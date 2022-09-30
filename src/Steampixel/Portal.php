@@ -93,8 +93,8 @@ class Portal {
 	}
 
   // Send buffer
-	public static function sendBuffer($portal_name, $append = true, $once) {
-		self::send($portal_name, ob_get_clean(), $append, $once);
+	public static function sendBuffer($portal_name, $prepend = false, $once = false) {
+		self::send($portal_name, ob_get_clean(), $prepend, $once);
 	}
 
 	// Portal start

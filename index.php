@@ -56,6 +56,13 @@ Portal::send('style', '<style>body{text:#cc0000;}</style>');
 // Prepend content instead of appending it
 Portal::send('main-content', '<p>The portal page</p>', true);
 
+// Lets send a buffered stream to the main content area
+Portal::createBuffer();
+?>
+<p>This is a stream of buffered content</p>
+<?PHP
+Portal::sendBuffer('main-content', false);
+
 // Lets send a snippet of Javascript once to a target portal
 // This is usefull if some plugins or theme particals requires the same
 Portal::send('javascript', '<script>console.log("Hello world 2");</script>', false, true);
