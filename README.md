@@ -1,7 +1,7 @@
 # Simple PHP Portals ⇶🕳⇇
-Hey! This is a simple, puristic and small PHP portal engine. With portals, you can send contents from any procedural point of your app to any other point. Throw your contents back and forth through time. A portal is a single point of time and space inside your template or app. You can just open portals and then send contents to there from any other location of your app. No mater if the target portal is defined before or after, you will send content to there. This makes portals extremely efficient. Portals just work by replacing strings and will not require complex parsing. So this approach is very fast.
+Hey! This is a simple, puristic and small single class PHP portal engine. With portals, you can send contents (strings) from any procedural point of your app to any other point. Throw your contents back and forth through time. A portal is a single point of time and space inside your template or app. You can just open portals and then send contents to there from any other location of your app. No mater if the target portal is defined before or after you will send content to there. This makes portals extremely efficient. Portals just work by replacing strings and will not require complex parsing. So this approach is very fast.
 
-## Simple example:
+## 📋 Simple example:
 ```php
 <?php
 
@@ -26,7 +26,6 @@ Portal::send('style', '<style>body{background:#ccc;}</style>');
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?=Portal::open('head') ?>
     <?=Portal::open('style') ?>
   </head>
 
@@ -59,7 +58,7 @@ Portal::send('style', '<style>body{text:#cc0000;}</style>');
 Portal::compose();
 
 ```
-## Installation using Composer
+## 🎶 Installation using Composer
 Just run `composer require steampixel/simple-php-portals`
 Than add the autoloader to your project like this:
 ```php
@@ -73,14 +72,14 @@ Portal::init();
 
 ```
 
-## Prepend contents instead of appending them
+## ⇠ Prepend contents instead of appending them
 Sometimes you want to prepend contents to a portal instead of appending it.
-Just set the first parameter to true to prepend the content to the current stack.
+Just set the third parameter to true to prepend the content to the current stack.
 ```
 Portal::send('main-content', '<p>The portal page</p>', true);
 ```
 
-## Send contents only once
+## ⛔ Send contents only once
 Sometimes contents should only send once to a portal. No mater how often they are sent to there.
 This is useful if some plugins or theme partials requires the same resources, for example.
 Set the fourth parameter to true, so the following JavaScript will only be sent once:
@@ -88,7 +87,7 @@ Set the fourth parameter to true, so the following JavaScript will only be sent 
 Portal::send('javascript', '<script>console.log("Hello world 2");</script>', false, true);
 ```
 
-## Test setup with Docker
+## 🚢 Test setup with Docker
 I have created a little Docker test setup.
 
 1. Build the image: `docker build -t simplephpportals docker/image-php-7.4.1`
@@ -97,5 +96,5 @@ I have created a little Docker test setup.
 
 3. Open your browser and navigate to http://localhost
 
-## License
+## 📃 License
 This project is licensed under the MIT License. See LICENSE for further information.

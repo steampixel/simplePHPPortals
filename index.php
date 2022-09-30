@@ -24,7 +24,6 @@ Portal::send('javascript', '<script>console.log("Hello world 2");</script>', fal
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?=Portal::open('head') ?>
     <?=Portal::open('style') ?>
   </head>
 
